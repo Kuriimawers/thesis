@@ -1,0 +1,277 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-heading {
+  animation: slideInFromLeft 1s ease-out; /* Apply the animation to the heading */
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+  animation: fadeIn 1s ease-in;
+  width: 100%; /* Make the image fill the circle */
+  height: 100%; /* Make the image fill the circle */
+  object-fit: cover;
+  width: 70px; /* Set the width and height to the same value to create a circle */
+  height: 70px;
+  border-radius: 50%; /* Make the border-radius 50% to create a circle */
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+.search-bar {
+  margin: 20px 0;
+  animation: fadeIn 2s ease-in;
+}
+
+.search-bar input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  transition: box-shadow 0.3s;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeIn 2s ease-in;
+}
+
+.button:hover {
+  background-color: #ff9472;
+  transform: translateY(-3px);
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 5px;
+  animation: fadeIn 2s ease-in;
+}
+
+h2 {
+  font-size: 2em;
+  color: #ff9472;
+  margin: 10px 0;
+  animation: fadeIn 2s ease-in;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  animation: fadeIn 2s ease-in;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.owner-info {
+  width: 65%;
+  text-align: left;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.owner-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.owner-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info {
+  width: 30%;
+  text-align: left;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #ff6f61;
+  text-align: center;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+.owner-info ul {
+  list-style: none;
+  padding: 0;
+}
+.owner-info li {
+  margin-bottom: 10px;
+}
+.contact-logo {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 10px; /* Space between the image and text */
+}
+.custom-button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #ff6f61; /* Match the color with your theme */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeIn 2s ease-in;
+}
+
+.custom-button:hover {
+  background-color: #ff9472; /* Slightly lighter shade on hover */
+  transform: translateY(-3px);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer nav ul {
+  justify-content: center;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+}
